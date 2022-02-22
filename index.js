@@ -5,6 +5,9 @@ const ul = document.getElementById("ul");
 // const todos = localStorage.getItem("todos"); こちらだと配列として取り出せなかった
 const todos = JSON.parse(localStorage.getItem("todos"));
 
+//フォームにフォーカスを当てる
+input.focus();
+
 if (todos) {
     todos.forEach((todo) => {
        add(todo);
