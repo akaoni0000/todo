@@ -56,6 +56,7 @@ function add(todo) {
         li.addEventListener("click", function () {
             // toggleはそのクラスがあれば削除してなければ追加する
             li.classList.toggle("text-decoration-line-through");
+            input.focus();
             saveData();
         });
 
@@ -63,6 +64,7 @@ function add(todo) {
             // 親要素にまでクリックアクションがいくのを防ぐ
             event.stopPropagation();
             li.remove();
+            input.focus();
             saveData();
         });
 
